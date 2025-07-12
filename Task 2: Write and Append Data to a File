@@ -1,0 +1,11 @@
+data = input("Enter something: ")
+
+with open("output.txt", "w") as f:
+    f.write(data + "\n")
+more = input("Enter more to add: ")
+with open("output.txt", "a") as f:
+    f.write(more + "\n")
+print("\nFile content:")
+with open("output.txt", "r") as f:
+    for line in f:
+        print(line.strip())
